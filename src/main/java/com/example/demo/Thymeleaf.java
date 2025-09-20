@@ -24,6 +24,23 @@ public class Thymeleaf  {
 		
 		List<String> inquiryTypes =Arrays.asList("○○○の問い合わせ","×××の問い合わせ","△△△の問い合わせ");
 		model.addAttribute("inquiryTypes",inquiryTypes);
-		return "form";
+		return "fragment";
+	}
+	@GetMapping("/sample")
+	public String SampleControlloer(Model model) {
+		model.addAttribute("list",List.of("Profile","SNS","Contact"));
+		
+		User user= new User();
+		user.setName("池田　愛美");
+		user.setAddress("manami.ikeda@example.com");
+		user.setTel("XXX-XXXX-XXXX");
+		model.addAttribute("user",user);
+		
+		ContactForm contactForm =new ContactForm();
+		model.addAttribute("contactForm",contactForm);
+		List<String> inquiryTypes =Arrays.asList("○○○の問い合わせ","×××の問い合わせ","△△△の問い合わせ");
+		model.addAttribute("inquiryTypes",inquiryTypes);
+		
+		return "sample";
 	}
 }

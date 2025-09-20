@@ -4,7 +4,7 @@ public class User {
 	private String name;
 	private String address;
 	private String tel;
-	private String inquiryTypes;
+	private String inquiryType;
 	
 	public User() {
 	}
@@ -26,10 +26,10 @@ public class User {
 	public void setTel(String tel) {
 		this.tel = tel;
 	}
-	public String getinquiryType(){
-		return inquiryTypes;
+	public String getInquiryType(){
+		return inquiryType;
 	}
-	public void setinquiryType(String inquiryType){
-		this.inquiryTypes =inquiryType;
+	public void setInquiryType(String inquiryType){
+		this.inquiryType =inquiryType;
 	}
 }
